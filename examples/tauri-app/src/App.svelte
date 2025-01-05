@@ -1,6 +1,6 @@
 <script>
   import Greet from './lib/Greet.svelte'
-  import { getInsets } from 'tauri-plugin-safe-area-insets-api'
+  import { getInsets } from 'tauri-plugin-safe-area-insets'
 
 	let response = ''
 
