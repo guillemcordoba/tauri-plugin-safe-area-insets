@@ -1,1 +1,1 @@
-{"default":{"identifier":"default","description":"enables the default permissions","local":true,"windows":["main"],"permissions":["core:default","safe-area-insets:default"]}}
+{"default":{"identifier":"default","description":"enables the default permissions","local":true,"windows":["main"],"permissions":["core:default"]},"mobile-capability":{"identifier":"mobile-capability","description":"","local":true,"windows":["main"],"permissions":["safe-area-insets:default"],"platforms":["iOS","android"]}}

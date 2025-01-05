@@ -1,8 +1,8 @@
 import XCTest
-@testable import ExamplePlugin
+@testable import InsetPlugin
 
-final class ExamplePluginTests: XCTestCase {
+final class InsetPluginTests: XCTestCase {
     func testExample() throws {
-        let plugin = ExamplePlugin()
+        let plugin = InsetPlugin()
     }
 }

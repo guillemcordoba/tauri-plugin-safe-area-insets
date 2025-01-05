@@ -1,15 +1,19 @@
 <script>
   import Greet from './lib/Greet.svelte'
-  import { ping } from 'tauri-plugin-safe-area-insets-api'
+  import { getInsets } from 'tauri-plugin-safe-area-insets-api'
 
 	let response = ''
 
-	function updateResponse(returnValue) {
-		response += `[${new Date().toLocaleTimeString()}] ` + (typeof returnValue === 'string' ? returnValue : JSON.stringify(returnValue)) + '<br>'
-	}
+	// function updateResponse(returnValue) {
+	// 	response += `[${new Date().toLocaleTimeString()}] ` + (typeof returnValue === 'string' ? returnValue : JSON.stringify(returnValue)) + '<br>'
+	// }
 
 	function _ping() {
-		ping("Pong!").then(updateResponse).catch(updateResponse)
+    getInsets().then(res => {
+      response += JSON.stringify(res);
+    }).catch(err => {
+      response += JSON.stringify(err);
+    })
 	}
 </script>
 

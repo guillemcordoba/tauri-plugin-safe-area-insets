@@ -1655,21 +1655,6 @@
           "description": "Denies the unminimize command without any pre-configured scope.",
           "type": "string",
           "const": "core:window:deny-unminimize"
-        },
-        {
-          "description": "Default permissions for the plugin",
-          "type": "string",
-          "const": "safe-area-insets:default"
-        },
-        {
-          "description": "Enables the get_insets command without any pre-configured scope.",
-          "type": "string",
-          "const": "safe-area-insets:allow-get-insets"
-        },
-        {
-          "description": "Denies the get_insets command without any pre-configured scope.",
-          "type": "string",
-          "const": "safe-area-insets:deny-get-insets"
         }
       ]
     },

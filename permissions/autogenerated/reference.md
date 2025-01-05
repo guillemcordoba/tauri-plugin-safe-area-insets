@@ -2,7 +2,7 @@
 
 Default permissions for the plugin
 
-- `allow-ping`
+- `allow-get-insets`
 
 ## Permission Table
 
@@ -16,12 +16,12 @@ Default permissions for the plugin
 <tr>
 <td>
 
-`safe-area-insets:allow-ping`
+`safe-area-insets:allow-get-insets`
 
 </td>
 <td>
 
-Enables the ping command without any pre-configured scope.
+Enables the get_insets command without any pre-configured scope.
 
 </td>
 </tr>
@@ -29,12 +29,12 @@ Enables the ping command without any pre-configured scope.
 <tr>
 <td>
 
-`safe-area-insets:deny-ping`
+`safe-area-insets:deny-get-insets`
 
 </td>
 <td>
 
-Denies the ping command without any pre-configured scope.
+Denies the get_insets command without any pre-configured scope.
 
 </td>
 </tr>

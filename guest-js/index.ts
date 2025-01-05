@@ -1,9 +1,12 @@
-import { invoke } from '@tauri-apps/api/core'
+import { invoke } from "@tauri-apps/api/core";
 
-export async function ping(value: string): Promise<string | null> {
-  return await invoke<{value?: string}>('plugin:safe-area-insets|ping', {
-    payload: {
-      value,
-    },
-  }).then((r) => (r.value ? r.value : null));
+export interface Insets {
+  top: number;
+  bottom: number;
+  left: number;
+  right: number;
+}
+
+export async function getInsets(): Promise<Insets> {
+  return await invoke("plugin:safe-area-insets|get_insets");
 }

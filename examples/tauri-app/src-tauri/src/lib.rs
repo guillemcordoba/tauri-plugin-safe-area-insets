@@ -8,7 +8,14 @@ fn greet(name: &str) -> String {
 pub fn run() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![greet])
-        .plugin(tauri_plugin_safe_area_insets::init())
+        // .plugin(tauri_plugin_safe_area_insets::init())
+        .setup(move |app| {
+            #[cfg(mobile)]
+            {
+                app.handle().plugin(tauri_plugin_safe_area_insets::init())?;
+            }
+            Ok(())
+        })
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
