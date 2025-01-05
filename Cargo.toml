@@ -1,8 +1,8 @@
 [package]
 name = "tauri-plugin-safe-area-insets"
 version = "0.1.0"
-authors = [ "You" ]
-description = ""
+authors = [ "Ronald <ronald.goedeke@icloud.com>" ]
+description = "Tauri plugin for android safe area insets."
 edition = "2021"
 rust-version = "1.77.2"
 exclude = ["/examples", "/webview-dist", "/webview-src", "/node_modules"]

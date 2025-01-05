@@ -1,8 +1,8 @@
 {
   "name": "tauri-plugin-safe-area-insets",
   "version": "0.1.0",
-  "author": "You",
-  "description": "",
+  "author": "Ronald <ronald.goedeke@icloud.com>",
+  "description": "Tauri plugin for android safe area insets.",
   "type": "module",
   "types": "./dist-js/index.d.ts",
   "main": "./dist-js/index.cjs",
