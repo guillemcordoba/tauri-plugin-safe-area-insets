@@ -22,9 +22,14 @@ class InsetPlugin(private val activity: Activity): Plugin(activity) {
        val rootView = activity.window.decorView
        ViewCompat.getRootWindowInsets(rootView)?.let { windowInsets ->
            val systemBars = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
+           val ime = windowInsets.getInsets(WindowInsetsCompat.Type.ime())
            val result = JSObject()
            result.put("top", toDIPFromPixel(systemBars.top.toFloat()).toDouble())
-           result.put("bottom", toDIPFromPixel(systemBars.bottom.toFloat()).toDouble())
+           if (ime.bottom != 0) {
+               result.put("bottom", toDIPFromPixel(ime.bottom.toFloat()).toDouble())
+           } else {
+               result.put("bottom", toDIPFromPixel(systemBars.bottom.toFloat()).toDouble())
+           }
            result.put("left", toDIPFromPixel(systemBars.left.toFloat()).toDouble())
            result.put("right", toDIPFromPixel(systemBars.right.toFloat()).toDouble())
            invoke.resolve(result)

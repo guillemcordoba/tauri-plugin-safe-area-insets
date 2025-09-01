@@ -15,6 +15,21 @@
       response += JSON.stringify(err);
     })
 	}
+
+	const MINIMUM_KEYBOARD_HEIGHT = 300;
+	const set = async () => {
+  	let deviceInsets = await getInsets();
+  	document.documentElement.style.cssText = `--safe-area-inset-top: ${deviceInsets.top}px; --safe-area-inset-bottom: ${deviceInsets.bottom}px;`;
+	  if (deviceInsets.bottom > MINIMUM_KEYBOARD_HEIGHT) {
+	    // document.body.style.height = `${}`;
+	    document.clientHeight;
+	  }
+  }
+
+  set()
+  document.addEventListener('focus', set);
+  document.addEventListener('blur', set);
+
 </script>
 
 <main class="container">
@@ -38,6 +53,7 @@
 
   <div class="row">
     <Greet />
+    <input>
   </div>
 
   <div>
